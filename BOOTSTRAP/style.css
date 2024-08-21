@@ -1,0 +1,681 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 6px;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    font-family: Montserrat;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+section {
+    /*Projeckte - über uns -Portfolio yazi büyüklüklerini buradan ortak cekiyor-
+    Projeckte - über uns- Portfolio übernimmt die Beitragsgrößen aus diesem Code-Blog*/
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    background-color: rgb(255, 153, 0);
+    text-align: center;
+
+}
+
+.btn-large {
+    font-size: 1.5rem;
+    padding: 2.2rem 1.6rem;
+}
+
+.btn {
+    margin-top: 4rem;
+    font-weight: 400;
+    display: inline-block;
+    border: 2px solid #fff;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.btn-soziale {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+.btn-outline {
+    color: #fff;
+    border-color: #fff;
+    background-color: transparent;
+}
+
+.btn-outline:hover {
+    color: #fff;
+    background-color: #128F76;
+    transition: all 0.5s;
+    font-size: 1.8rem;
+
+}
+
+.btn-primary {
+    background-color: rgb(57, 168, 141);
+    border-bottom: rgb(57, 168, 141);
+    padding: 1.2rem 1rem;
+    border: 2px solid rgb(57, 168, 141);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #128F76;
+    border-color: #18bc9c;
+    border: 2px solid rgb(57, 168, 141);
+    transition: all 0.5s;
+    font-size: 1.8rem;
+}
+
+.img-fluid {
+    max-width: 656px;
+    height: auto;
+    border-radius: 10px;
+
+
+}
+
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+    /* bootstrap yazisi altinda görünmeyen bos bir satiri kapsiyor
+                  umfasst eine unsichtbare Leerzeile unter dem Bootstrap-Text*/
+}
+
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.col {
+    float: left;
+    width: 33.333%;
+    padding: 10px;
+
+
+}
+
+@media (max-width:576px) {
+    /*Skalierung der Handygröße*/
+
+    .container {
+        max-width: 540px;
+        padding: 5%;
+
+    }
+
+    html {
+        font-size: 5px;
+    }
+
+    .col {
+        width: 100%;
+        padding: 10px 40px;
+    }
+
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+
+    }
+
+    header {
+        .container {
+            padding-top: 100px;
+
+        }
+    }
+
+
+
+
+}
+
+@media (min-width:576px) {
+    /*Skalierung der Tablettgröße*/
+
+    .container {
+        max-width: 740px;
+
+    }
+
+    header {
+        .container {
+            padding: 60px;
+            padding-bottom: 500px;
+        }
+    }
+
+    .img-fluid {
+
+        max-width: 500px;
+        height: auto;
+        border-radius: 10px;
+
+
+    }
+
+    html {
+        font-size: 8px;
+    }
+
+    .col {
+        width: 50%;
+    }
+
+
+
+
+}
+
+@media (min-width:992px) {
+    /*Skalierung der Standart Bildschrimgröße(etw.10-15 Zoll)*/
+
+    .container {
+        max-width: 960px;
+
+    }
+
+    header {
+        .container {
+            padding: 18px;
+        }
+    }
+
+
+    html {
+        font-size: 9px;
+    }
+
+    .col {
+        width: 33.333%;
+    }
+
+}
+
+@media (min-width:1200px) {
+    /*Skalierung der Bildschirmgröße (ab 16 Zoll)*/
+
+    .container {
+        max-width: 1140px;
+    }
+
+    header {
+        .container {
+            padding: 0px;
+        }
+    }
+
+    html {
+        font-size: 10px;
+    }
+
+}
+
+
+
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+/* NAV-Bar*/
+nav {
+    width: 100%;
+    font-family: Montserrat;
+    background-color: #2a3b4f;
+    color: #fff;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    position: fixed;
+    /*posit Fixed olunca Width 100% ayarlanmali*/
+    /*Die Breite sollte auf 100% gesetzt werden, wenn (Position fest)*/
+
+    z-index: 500;
+    /*Navi Bar tüm ögelerin üstünde olur*/
+    /*Navi-Leiste oben auf allen Elementen*/
+
+}
+
+/*Bootstrap boxunu sola alir*/
+/*verschiebt die Bootstrap-Box nach links*/
+#logo-box {
+    float: left;
+    padding-top: 0.5rem;
+}
+
+#logo-box .symbol {
+    color: #fff;
+    font-weight: 700;
+    font-size: 2.8rem;
+}
+
+
+#nav-links {
+    /* Kontakt-ÜberUns-Port elemanlarini saga kaydirir*/
+    /*verschiebt die Elemente von Kon.Überun.Port nach rechts*/
+    float: right;
+}
+
+#nav-links .nav-item {
+    /* Kontakt-ÜberUns-Port elemanlarini YATAY hizalar*/
+    /*alle Alementen werden horizontal ausgerichtet*/
+    float: left;
+    margin: 0.5rem;
+    /* Kontakt-ÜberUns-Port aralarindaki bosluk */
+    /*lässt eine Lücke zwischen allen Elementen*/
+}
+
+#nav-links .nav-link {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-display: block;
+    padding: 1.6rem;
+    letter-spacing: 0.1rem;
+    /*harflerin arasindaki boslugu belirtir*/
+    /*lässt ein Leerzeichen zwischen allen Buchstaben*/
+    transition: color 0.4s;
+}
+
+#nav-links .nav-link:hover {
+    color: orange;
+    font-size: 1.7rem;
+    transition: all.5s;
+}
+
+#nav-links .nav-icon {
+    display: none;
+}
+
+@media (max-width:992px) {
+
+    #logo-box {
+        float: none;
+        text-align: left;
+    }
+
+    #nav-links {
+        float: none;
+    }
+
+    #nav-links .nav-link {
+        font-size: 2rem;
+        padding-left: 0;
+    }
+
+    #nav-links .nav-item {
+        float: none;
+        /* float alta aldi*/
+        text-align: left;
+    }
+
+    #nav-links .nav-icon {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 5px;
+        font-size: 3rem;
+    }
+
+    #nav-links.responsive li:not(:first-child)
+
+    /*responsive clasina sahip degilse(ilk eleman menubar haric)*/
+    /*hat keine responsive Klasse (außer für das erste Element menubar)*/
+        {
+        display: none;
+
+    }
+
+}
+
+
+/* Header */
+
+
+header {
+    background-color: rgb(0, 39, 58);
+    height: 600px;
+    padding-top: calc(106px + 7rem);
+    /*calc funk. ile  yapildiginda element kendi kendine ölceklendiricek*/
+    /*die Elemente sich selbst skalieren mit dem Calc.Funk.*/
+    padding-bottom: 500px;
+    text-align: center;
+
+}
+
+header h1 {
+    color: white;
+    font-size: 6rem;
+
+}
+
+header h2 {
+    color: #fff;
+    font-size: 2.4rem;
+    font-family: "Lato";
+    font-weight: 300;
+    padding: 3rem;
+}
+
+.hr.star-light {
+    border-color: #fff;
+}
+
+hr.star-dark {
+    border-color: rgb(0, 39, 58);
+}
+
+.star-light,
+.star-dark {
+    border: none;
+    border-top: 0.4rem solid #fff;
+    border-radius: 10px;
+    max-width: 25rem;
+    /*cizgi boyutu - Linienlänge*/
+    margin: 2.5rem auto;
+    /* distan iceriye >> alt üst 25 px ve sag sol otomatik ayarliyor*/
+    overflow: visible;
+    height: 0;
+
+}
+
+.star-dark::after {
+    content: "";
+    color: dimgray;
+    font-weight: 900;
+    font-size: 3.2rem;
+    position: relative;
+    top: -28px;
+    padding: 0 8px;
+
+}
+
+.star-light::after {
+    content: "\2756";
+    color: white;
+    font-weight: 900;
+    font-size: 3.2rem;
+    position: relative;
+    top: -28px;
+    padding: 0 8px;
+    background-color: rgb(0, 39, 58);
+}
+
+
+/* Projeckte */
+
+
+
+#projeckt h2 {
+    font-size: 4.8ram;
+    color: rgb(0, 39, 58);
+}
+
+.img-fluid-p {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    /*width: 350px; sabit genislik - feste Breite*/
+    /*height: 200px;sabit yükseklik- feste Höhe*/
+    /*object-fit: cover; resmi kapsayiciya göre kirp(ama bütünlük bozuluyor)*/
+    /*Bild nach Container zuschneiden (aber Integrität ist gebrochen)*/
+}
+
+.project-item {
+    position: relative;
+
+}
+
+.project-item img {
+    display: inline-flex;
+    width: 500px;
+    height: 300px;
+}
+
+.img-overlay {
+    position: absolute;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 98%;
+    background-color: rgb(107, 107, 107);
+    opacity: 0.4;
+    transition: width 1.4s ease-in;
+}
+
+.img-overlay .icon {
+    color: #ffffff;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.project-item:hover .img-overlay {
+    opacity: 0.4;
+    border-radius: 10px;
+    width: 0;
+    height: 98%;
+
+
+}
+
+/* About */
+
+#about {
+    background-color: rgb(57, 168, 141);
+    color: #fff;
+}
+
+#about h2 {
+    font-size: 4.8rem;
+}
+
+#about-text {
+    text-align: left;
+    /*yazi blogu sola yaslanir*/
+    /*text blog linksbündig*/
+
+}
+
+#about-text .left {
+
+    float: none;
+    width: 100%;
+    padding-right: 5px;
+    padding-left: 25px;
+}
+
+#about-text .right {
+
+    float: none;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 25px;
+
+
+}
+
+#about-text .text {
+    font-size: 2rem;
+}
+
+@media (min-width:992px) {
+    #about-text .left {
+        float: left;
+        width: 50%;
+        padding-right: 10px;
+        padding-left: 210px;
+    }
+
+    #about-text .right {
+        float: right;
+        width: 50%;
+        padding-right: 210px;
+        padding-left: 10px;
+    }
+
+}
+
+.hr2 {
+    max-width: 105rem;
+    margin: 2.5rem auto;
+    overflow: visible;
+}
+
+
+/* Kontakt */
+
+
+#kontakt h2 {
+    font-size: 4.8rem;
+    color: #2c3e50;
+
+}
+
+#kontakt .hr2 {
+    border: none;
+    border-top: 0.1rem solid #2c3e50;
+    border-radius: 10px;
+    max-width: 105rem;
+    /*cizgi boyutu*/
+    /*cizgi boyutu - Linienlänge*/
+    margin: 2.5rem auto;
+    /* distan iceriye >> alt üst 25 px ve sag sol otomatik ayarliyor*/
+    overflow: visible;
+    height: 0;
+}
+
+#kontakt-form {
+    padding-top: 50px;
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;
+
+}
+
+.form-gruppe {
+
+    border-bottom: 1px;
+    padding-bottom: 3rem;
+    margin-bottom: 4rem;
+}
+
+.form-gruppe input {
+
+    border: none;
+    background-color: #f6ba08;
+    ;
+    width: 100%;
+    display: block;
+    font-size: 2rem;
+}
+
+.form-gruppe {
+
+    border: none;
+    width: 100%;
+    display: block;
+    font-size: 2rem;
+}
+
+.form-gruppe input:focus {
+
+    outline: 0;
+}
+
+#textarea1 {
+    border: none;
+    color: #000000;
+    border-radius: 10px;
+    background-color: transparent;
+    width: 100%;
+    display: block;
+    font-size: large;
+
+}
+
+#textarea1 input:focus {
+    outline: 0;
+}
+
+#kontakt {
+    background-color: #f6ba08;
+}
+
+/* Footer */
+
+footer {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: #2a3b4f;
+    color: #fff;
+    text-align: center;
+}
+
+footer h4 {
+    font-size: 2.4rem;
+}
+
+footer p {
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+footer li {
+    /*Sozial Med. iconlar yanyana gelir- alle Symbole der Sozialmedien sind nebeneinander angeordnet*/
+
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.copyright {
+    background-color: dimgray;
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+    color: #fff;
+    text-align: center;
+}
